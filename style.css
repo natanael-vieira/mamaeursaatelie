@@ -1,27 +1,29 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
-    font-family: 'Poppins', 'Times New Roman', Times, serif ;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
     background-color: whitesmoke;
 }
 
-a{
+a {
     text-decoration: none;
 }
-img{
+
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
 p {
     font-size: 1.4rem;
     margin-top: 5px;
@@ -30,13 +32,14 @@ p {
     letter-spacing: 0.05rem;
 }
 
-.container{
+.container {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .section-title {
     font-size: 4rem;
     font-weight: 500;
@@ -52,15 +55,16 @@ p {
 
 /* Seção de apresentação */
 
-#presentation{
+#presentation {
     background-image: url(./Imagens/ursa-09.png);
     background-size: cover;
     background-position: top center;
     position: relative;
     z-index: 1;
-    
+
 }
-#presentation h1{
+
+#presentation h1 {
     display: block;
     width: fit-content;
     font-size: 5rem;
@@ -69,17 +73,21 @@ p {
     animation: text_reveal .5s ease forwards;
     animation-delay: 1.5s;
 }
-#presentation h1:nth-child(1){
+
+#presentation h1:nth-child(1) {
     animation-delay: .8s;
 }
-#presentation h1:nth-child(2){
+
+#presentation h1:nth-child(2) {
     animation-delay: 1.8s;
 }
-#presentation h1:nth-child(3){
+
+#presentation h1:nth-child(3) {
     animation: text_reveal_name .5s ease forwards;
     animation-delay: 2.8s;
 }
-#presentation .cta{
+
+#presentation .cta {
     display: inline-block;
     padding: 10px 30px;
     color: goldenrod;
@@ -93,38 +101,44 @@ p {
     transition-property: background-color, color;
 
 }
-#presentation .cta:hover{
+
+#presentation .cta:hover {
     color: whitesmoke;
     font-weight: 500;
     background-color: goldenrod;
 }
-#presentation h1 span{
+
+#presentation h1 span {
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     height: 100%;
     width: 0%;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
     background-color: goldenrod;
 }
-#presentation h1:nth-child(1) span{
+
+#presentation h1:nth-child(1) span {
     animation-delay: .5s;
 }
-#presentation h1:nth-child(2) span{
+
+#presentation h1:nth-child(2) span {
     animation-delay: 1.5s;
 }
-#presentation h1:nth-child(3) span{
+
+#presentation h1:nth-child(3) span {
     animation-delay: 2.5s;
 }
-#presentation::after{
+
+#presentation::after {
     content: '';
     position: absolute;
-    left:0;
+    left: 0;
     top: 0;
-    height:100%;
+    height: 100%;
     width: 100%;
-    background-color:black;
+    background-color: black;
     opacity: 0.1;
     z-index: -1;
 }
@@ -137,17 +151,20 @@ p {
     margin: 0 auto;
     padding: 100px 0;
 }
-#products .products-header h1{
+
+#products .products-header h1 {
     margin-bottom: 50px;
 }
+
 #products .all-products {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-#products .products-item{
-    display:flex;
+
+#products .products-item {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -170,12 +187,12 @@ p {
     text-align: justify;
 }
 
-#products .products-info h1{
+#products .products-info h1 {
     font-size: 4rem;
     font-weight: 500;
 }
 
-#products .products-info h2{
+#products .products-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 10px;
@@ -192,42 +209,47 @@ p {
     content: '';
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     opacity: 0.7;
 }
-#products .products-img img{
+
+#products .products-img img {
     transition: 0.5s ease transform;
 }
-#products .products-item:hover .products-img img{
+
+#products .products-item:hover .products-img img {
     transform: scale(1.1);
 }
 
 /* Keyframes */
 
-@keyframes text_reveal{
-    100%{
+@keyframes text_reveal {
+    100% {
         color: whitesmoke;
-        -webkit-text-stroke: .01em rgb(0, 0, 40); /*Vamos deixar por enquato*/
+        -webkit-text-stroke: .01em rgb(0, 0, 40);
+        /*Vamos deixar por enquato*/
     }
 }
-@keyframes text_reveal_name{
-    100%{
+
+@keyframes text_reveal_name {
+    100% {
         color: goldenrod;
         font-weight: 500px;
     }
 }
 
-@keyframes text_reveal_box{
-    50%{
-        width:100%;
-        left:0;
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
     }
-    100%{
+
+    100% {
         width: 0;
-        left:100%
+        left: 100%
     }
 }
 
@@ -240,12 +262,15 @@ p {
         width: 100%;
         border-radius: 0;
     }
-    #products .all-products .products-info{
+
+    #products .all-products .products-info {
         height: 100%
     }
-    #products .all-products .products-img{
+
+    #products .all-products .products-img {
         height: 100%
     }
+
     #products .products-item:nth-child(even) {
         flex-direction: row-reverse;
     }
