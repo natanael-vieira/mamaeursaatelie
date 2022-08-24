@@ -139,7 +139,7 @@ p {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.1;
+    opacity: 0.0; /*Deixei em 0 para não precisar tirar essa linha, caso eu queira deixar novamente com um tom de filtro por cima só aumentar a opacidade*/
     z-index: -1;
 }
 
@@ -212,8 +212,8 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    opacity: 0.7;*/
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.0; /*Aqui também, futuramente posso trocar e deixar a imagem correndo */
 }
 
 #products .products-img img {
